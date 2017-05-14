@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <div id="app" class="container">
+      <div class="theme-container">
+        <div class="title-cutter">
+          <h1 class="theme-title">
+            stay updated
+            <span class="font-lite lite-title">news flash</span>
+          </h1>
+        </div>
+          <h4 class="next">
+            next:
+            <span v-cloak class="font-lite next-title">{{nextArticle}}</span>
+          </h4>
+        <div class="timeline-container">
+          <div class="timeline"></div>
+          <div class="timeline-active"></div>
+        </div>
+      </div>
+      <div class="article-container">
+        <h3 v-cloak class="time-stap">{{articleDate}}</h3>
+        <h2 v-cloak class="article-title">{{articleTitle}}</h2>
+        <p v-cloak class="article-description" >{{articleDesc}}</p>
+      </div>
+      <div class="computer-container">
+        <img class="imac" src="./src/img/imac.png" alt="imac">
+        <img v-cloak v-show="showImg" class="article-img" :src="articleImg" alt="article image">
+        <div class="shadow"></div>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="./main.js"></script>
+</html>
